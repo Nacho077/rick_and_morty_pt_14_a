@@ -1,7 +1,8 @@
 import Card from './Card';
+import sytle from './Cards.module.css'
 
 export default function Cards(props) {
-   return <div>
+   return <div className={sytle.container}>
       {props.characters.map(character => (
          <Card
             key={character.id}
