@@ -7,7 +7,7 @@ export default function Cards(props) {
          <Card
             key={character.id}
             character={character}
-            onClose={() => window.alert('Emulamos que se cierra la card')}
+            onClose={() => props.onClose(character.id)}
          />
       ))}
    </div>;
