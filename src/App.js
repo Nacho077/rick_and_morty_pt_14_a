@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react'
+// import { useState } from 'react'
 // import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 // import SearchBar from './components/SearchBar.jsx';
@@ -8,7 +8,7 @@ import Nav from './components/Nav';
 import axios from 'axios'
 
 function App() {
-   let [characters, setCharacters] = useState([])
+   let [characters, setCharacters] = React.useState([])
 
    const validation = (id) => {
       const result = characters.find(character => character.id == id)
@@ -17,14 +17,12 @@ function App() {
       return !!result
 
       // const result2 = characters.filter(character => character.id == id)
-      // // 1 => true
-      // // 0 => false
+      // 1 => true
+      // 0 => false
       // return !!result2.length
 
       // const result3 = characters.includes(character => Number(character.id) ==  Number(id))
-      // console.log(result3)
-
-      
+      // console.log(result3)      
    } 
 
    const onSearch = async (id) => {
