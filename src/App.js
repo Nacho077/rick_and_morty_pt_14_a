@@ -1,11 +1,15 @@
 import './App.css';
+import React from 'react'
 // import { useState } from 'react'
 // import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 // import SearchBar from './components/SearchBar.jsx';
 // import characters, { Rick } from './data.js';
 import Nav from './components/Nav';
+import Detail from './components/Detail'
+import About from './components/About'
 import axios from 'axios'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
    let [characters, setCharacters] = React.useState([])
@@ -21,7 +25,7 @@ function App() {
       // 0 => false
       // return !!result2.length
 
-      // const result3 = characters.includes(character => Number(character.id) ==  Number(id))
+      // const result3 = characters.includes(character => Number(character.id) ==  Number(id)) => NO FUNCIONA
       // console.log(result3)      
    } 
 
@@ -66,8 +70,12 @@ function App() {
    return (
       <div className='App'>
          <Nav onSearch={onSearch}/>
+         <Routes>
          {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
-         <Cards characters={characters} onClose={onClose} />
+            <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/detail/:id" element={<Detail />} />
+            
          {/* <Card
             id={Rick.id}
             name={Rick.name}
@@ -78,6 +86,7 @@ function App() {
             image={Rick.image}
             onClose={() => window.alert('Emulamos que se cierra la card')}
          /> */}
+         </Routes>
       </div>
    );
 }
