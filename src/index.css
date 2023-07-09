@@ -1,14 +1,30 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url("../assets/background.jpg");
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu Condensed', cursive, -apple-system,  BlinkMacSystemFont,    'Segoe UI',    'Roboto',    'Oxygen',    'Ubuntu',    'Cantarell',    'Fira Sans',    'Droid Sans',    'Helvetica Neue',    sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(135deg, #0a2802, #04220d, #06132c, #16072f, #260515, #340630, #230410 );
+  background-size: 500%;
+  animation: animatedBackgraund 30s infinite;
 }
+
+@keyframes animatedBackgraund{
+  0%{
+    background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+  background-position: 0% 50%;
+}
+}
+
+

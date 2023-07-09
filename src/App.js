@@ -2,14 +2,15 @@ import './App.css';
 import React from 'react'
 // import { useState } from 'react'
 // import Card from './components/Card.jsx';
-import Cards from './components/Cards.jsx';
+import Cards from './components/Cards/Cards.jsx';
 // import SearchBar from './components/SearchBar.jsx';
 // import characters, { Rick } from './data.js';
-import Nav from './components/Nav';
-import Detail from './components/Detail'
-import About from './components/About'
+import Nav from './components/Nav/Nav';
+import Detail from './components/Details/Detail'
+import About from './components/About/About'
 import axios from 'axios'
 import { Routes, Route } from 'react-router-dom'
+import Backgraund from './components/Backgraund/Backgraund';
 
 function App() {
    let [characters, setCharacters] = React.useState([])
@@ -69,10 +70,11 @@ function App() {
 
    return (
       <div className='App'>
-         <Nav onSearch={onSearch}/>
+         <Backgraund>estoy aca</Backgraund>
+         <Nav/>
          <Routes>
          {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
-            <Route path="/home" element={<Cards characters={characters} onClose={onClose} />}/>
+            <Route path="/home" element={<Cards characters={characters} onClose={onClose} onSearch={onSearch} />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/detail/:id" element={<Detail />} />
             
