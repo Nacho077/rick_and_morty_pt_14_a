@@ -20,8 +20,11 @@ const Detail = () => {
     }, [id])
 
      
-    return !character.image ? <h1>Cargando su personaje...</h1>
-        : (<div>
+    return !character.image ? (
+        <div>
+            <h1>Cargando su personaje...</h1>
+        </div>
+        ) : (<div>
             <img src={character?.image} alt='' /> 
             <h2>{character?.name}</h2>
             <div>
