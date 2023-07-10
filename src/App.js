@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react'
+import React, { useEffect } from 'react'
 // import { useState } from 'react'
 // import Card from './components/Card.jsx';
 import Cards from './components/Cards/Cards.jsx';
@@ -8,12 +8,34 @@ import Cards from './components/Cards/Cards.jsx';
 import Nav from './components/Nav/Nav';
 import Detail from './components/Details/Detail'
 import About from './components/About/About'
+import Login from './components/Login/Login'
 import axios from 'axios'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Backgraund from './components/Backgraund/Backgraund';
 
 function App() {
    let [characters, setCharacters] = React.useState([])
+   let [login, setLogin] = React.useState(false)
+   let location = useLocation()
+   let navigate = useNavigate()
+
+   const handleLogin = (userData) => {
+      const miEmail = "hola@gmail.com"
+      const miPass = "Hola123"
+
+      if(userData.email == miEmail && userData.password == miPass) {
+         setLogin(true)
+         navigate("/home")
+      }
+   }
+
+   const logOut = () => {
+      setLogin(false)
+   }
+
+   useEffect(() => {
+      !login && navigate("/")
+   }, [login])
 
    const validation = (id) => {
       const result = characters.find(character => character.id == id)
@@ -71,9 +93,11 @@ function App() {
    return (
       <div className='App'>
          <Backgraund>estoy aca</Backgraund>
-         <Nav/>
+         {location.pathname != "/" && <Nav logOut={logOut} />}
+         {/* {login && <Nav />} */}
          <Routes>
          {/* <SearchBar onSearch={(characterID) => window.alert(characterID)} /> */}
+            <Route path="/" element={<Login handleLogin={handleLogin} />}/>
             <Route path="/home" element={<Cards characters={characters} onClose={onClose} onSearch={onSearch} />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/detail/:id" element={<Detail />} />
