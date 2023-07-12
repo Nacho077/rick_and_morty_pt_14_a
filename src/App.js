@@ -13,6 +13,8 @@ import axios from 'axios'
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Backgraund from './components/Backgraund/Backgraund';
 
+
+
 function App() {
    let [characters, setCharacters] = React.useState([])
    let [login, setLogin] = React.useState(false)
@@ -92,6 +94,7 @@ function App() {
 
    return (
       <div className='App'>
+       
          <Backgraund>estoy aca</Backgraund>
          {location.pathname != "/" && <Nav logOut={logOut} />}
          {/* {login && <Nav />} */}
