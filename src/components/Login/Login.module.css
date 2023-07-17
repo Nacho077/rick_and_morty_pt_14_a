@@ -1,0 +1,106 @@
+.first{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    align-content: normal;
+    padding: 70px;
+    
+}
+
+.second{
+    
+    background: rgb(49, 4, 92);
+    width: 25rem;
+    height: 27rem;
+    border-radius: 20px ;
+    box-shadow: 1px 1px 36px 21px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 1px 1px 36px 21px rgba(192, 24, 192, 0.774);
+    -moz-box-shadow: 1px 1px 36px 21px rgba(0,0,0,0.75);
+
+}
+
+.gif{
+
+    width: 400px;
+    height: auto;
+    filter: saturate(234%);
+    border-radius: 20px 20px 0px 0px;
+   
+}
+
+.formDiv{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: left;
+    align-content: normal;
+    padding: 15px;
+    font-weight: 700;
+
+    
+}
+
+.labelText{
+    font-family:Courier New;
+    color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin: 5px ;
+    margin-left: -3px;
+}
+
+.inputDiv{
+    padding-bottom: 35px;
+}
+
+.soloInput{
+    border-color:#a20dbd; border-style:solid; padding:2px; font-size:16px; 
+    text-align:center; border-width:3px; border-radius:8px; 
+    box-shadow: -2px 5px 11px 0px rgba(42,42,42,.54);
+    font-family:Courier New;
+    font-weight:bold;
+}
+
+.soloInput:focus { outline:none; } 
+
+.error {
+    font-family:Courier New;
+    padding-top: 5px;
+    color: rgb(255, 0, 0);
+    position: absolute; 
+}
+
+
+
+.myButton {
+    
+	box-shadow:inset -2px 2px 6px 0px #e184f3;
+	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+	background-color:#c123de;
+	border-radius:7px;
+	border:3px solid #a511c0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:17px;
+	font-weight:bold;
+	padding:5px 23px;
+	text-decoration:none;
+	text-shadow:-7px 3px 6px #9b14b3;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+	background-color:#a20dbd;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+

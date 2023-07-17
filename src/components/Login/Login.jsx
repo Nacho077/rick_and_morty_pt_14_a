@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import validation from './validation'
+import style from './Login.module.css'
+import gif from './rick-and-morty-driving.gif'
 
 const Login = ({handleLogin}) => {
     let [formState, setFormState] = useState({
@@ -32,17 +34,35 @@ const Login = ({handleLogin}) => {
     }
 
     return(
-        <form onSubmit={handleSubmit}>
-            <label>EMAIL</label>
-            <input type="text" value={formState.value} name="email" onChange={handleState}/>
-            <p style={{color: "red"}}>{formErrors.email}</p>
-            
-            <label>CONTRASEÑA</label>
-            <input type="password" value={formState.password} name="password" onChange={handleState}/>
-            <p style={{color: "red"}}>{formErrors.password}</p>
+        <div className={style.first}>
+           <div className={style.second}>
+              <form onSubmit={handleSubmit}>
+                  <div>
+                    <img src={gif} alt='' className={style.gif}/>
+                  </div>
+                    <div className={style.formDiv}>
+                        
+                        <div className={style.inputDiv}>
+                           <label className={style.labelText}>EMAIL</label> 
+                           <input type="text" value={formState.value} name="email" onChange={handleState} className={style.soloInput} />
+                           <p className={style.error}>{formErrors.email}</p>
+                        </div>
+                        
+                        <div className={style.inputDiv}>
+                            <label className={style.labelText}>CONTRASEÑA</label>
+                            <input type="password" value={formState.password} name="password" onChange={handleState} className={style.soloInput}/>
+                            <p className={style.error} >{formErrors.password}</p>
+                        </div>    
+                        
+                    <div  >
+                      <button type="submit" className={style.myButton}>LOGEARSE</button>
+                    </div>
+                  </div>
+                 
+              </form>
 
-            <button type="submit">LOGEARSE</button>
-        </form>
+           </div>
+        </div>
     )
 }
 
