@@ -13,10 +13,11 @@ const Nav = ({logOut}) => {
                 <h3>PT-14A</h3>
             </div> 
             <div className='flex-row'>
-                <button className='btn invert radius' onClick={() => navigate("/home")}>HOME</button>
+                <button className='btn invert radius' onClick={() => navigate("/home")}>Home</button>
                 <button className='btn invert radius' onClick={() => navigate("/about")}>About</button>
-                <button className='btn invert radius' onClick={() => navigate(-1)}>Atras</button>
+                <button className='btn invert radius' onClick={() => navigate(-1)}>Back</button>
                 <button className='btn invert radius' onClick={() => logOut()}>LogOut</button>
+                <button className='btn invert radius' onClick={() => navigate("/favorites")}>Favorites</button>
             </div>
         </nav>
     )

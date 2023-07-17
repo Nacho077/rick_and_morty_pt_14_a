@@ -9,6 +9,7 @@ import Nav from './components/Nav/Nav';
 import Detail from './components/Details/Detail'
 import About from './components/About/About'
 import Login from './components/Login/Login'
+import Favorites from './components/Favorites/Favorites'
 import axios from 'axios'
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Backgraund from './components/Backgraund/Backgraund';
@@ -104,7 +105,7 @@ function App() {
             <Route path="/home" element={<Cards characters={characters} onClose={onClose} onSearch={onSearch} />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/detail/:id" element={<Detail />} />
-            
+            <Route path="/favorites" element={<Favorites />} />
          {/* <Card
             id={Rick.id}
             name={Rick.name}
