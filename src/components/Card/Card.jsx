@@ -30,7 +30,7 @@ export default function Card(props) {
 
    return (
       <div className={style.container}>
-         <button onClick={handleFavorite}>{isFav ? "❤️" : "🤍"}</button>
+         <button onClick={handleFavorite} className={style.heart}><p>{isFav ? "❤️" : "🤍"}</p></button>
          {props.onClose && <button onClick={handleClose} className={style.btn}>X</button>}
          <img className={style.image} src={image} alt='' /> 
          <div className={style.containerData}>

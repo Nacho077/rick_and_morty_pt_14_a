@@ -9,7 +9,7 @@ import Nav from './components/Nav/Nav';
 import Detail from './components/Details/Detail'
 import About from './components/About/About'
 import Login from './components/Login/Login'
-import Favorites from './components/Favorites/Favorites'
+import Favorites from './components/Favorites/FavoritesClass'
 import axios from 'axios'
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import Backgraund from './components/Backgraund/Backgraund';

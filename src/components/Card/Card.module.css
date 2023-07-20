@@ -9,6 +9,7 @@
     position: relative;
     transition: box-shadow 0.3s;
  }
+
 .container:hover{
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
 }
@@ -25,6 +26,26 @@
     color: white;
     cursor: pointer;
     border: none;
+}
+
+.heart {
+    position: absolute;
+    cursor: pointer;
+    width: 33px;
+    height: 33px;
+    border: none;
+    background-color: transparent;
+    left: 5px;
+}
+
+.heart > p {
+    transition-property: all;
+    transition-duration: .3s;
+    transform: scale(2);
+}
+
+.heart > p:hover {
+    transform: scale(2.5)
 }
 
 .image {

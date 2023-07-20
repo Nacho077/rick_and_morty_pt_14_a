@@ -5,8 +5,8 @@ import gif from './rick-and-morty-driving.gif'
 
 const Login = ({handleLogin}) => {
     let [formState, setFormState] = useState({
-        email: "",
-        password: ""
+        email: "hola@gmail.com",
+        password: "Hola123"
     })
 
     let [formErrors, setFormErrors] = useState({})
@@ -43,19 +43,19 @@ const Login = ({handleLogin}) => {
                     <div className={style.formDiv}>
                         
                         <div className={style.inputDiv}>
-                           <label className={style.labelText}>EMAIL</label> 
-                           <input type="text" value={formState.value} name="email" onChange={handleState} className={style.soloInput} />
+                           <label className={style.labelText}>Email</label> 
+                           <input type="text" value={formState.email} name="email" onChange={handleState} className={style.soloInput} />
                            <p className={style.error}>{formErrors.email}</p>
                         </div>
                         
                         <div className={style.inputDiv}>
-                            <label className={style.labelText}>CONTRASEÑA</label>
+                            <label className={style.labelText}>Password</label>
                             <input type="password" value={formState.password} name="password" onChange={handleState} className={style.soloInput}/>
                             <p className={style.error} >{formErrors.password}</p>
                         </div>    
                         
                     <div  >
-                      <button type="submit" className={style.myButton}>LOGEARSE</button>
+                      <button type="submit" className={style.myButton}>Log In</button>
                     </div>
                   </div>
                  
