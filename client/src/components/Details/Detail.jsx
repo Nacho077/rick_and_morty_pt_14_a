@@ -8,7 +8,8 @@ const Detail = () => {
 
     useEffect(() => {
         setTimeout(() => {
-            axios.get(`https://rickandmortyapi.com/api/character/${id}`)
+            //axios.get(`https://rickandmortyapi.com/api/character/${id}`)
+            axios.get(`http://localhost:3001/rickandmorty/character/${id}`)
             .then(({data}) => {
                 if (!data.name) {
                     window.alert("No existe un personaje con ese id")

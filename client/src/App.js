@@ -75,7 +75,8 @@ function App() {
       // })
 
       try {
-         const result = await axios(`https://rickandmortyapi.com/api/character/${id}`)
+         // const result = await axios(`https://rickandmortyapi.com/api/character/${id}`)
+         const result = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
 
          if (result.data.name) {
             setCharacters([...characters, result.data])
