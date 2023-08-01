@@ -5,6 +5,7 @@ http.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
 
     const {url} = req
+    console.log(url)
     if(url.includes('/rickandmorty/character')) { //localhost:3001/rickandmorty/character/:id
         const id = url.split('/').at(-1) // parseInt(url.split("/").pop())
         let character = getCharacterById(id)
