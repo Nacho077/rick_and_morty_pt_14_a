@@ -32,7 +32,7 @@ const Detail = () => {
                 <h2>{character?.species}</h2>
                 <h2>{character?.gender}</h2>
                 <h2>{character?.status}</h2>
-                <h2>{character?.origin?.name}</h2>
+                <h2>{character?.origin}</h2>
             </div>
         </div>)
 }
