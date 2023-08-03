@@ -85,7 +85,7 @@ function App() {
          }
       } catch(error) {
          console.log(error)
-         window.alert("No existe un personaje con ese ID ERROR")
+         window.alert(error.response.data)
       }
    }
 
