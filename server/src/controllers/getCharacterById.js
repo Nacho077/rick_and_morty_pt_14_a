@@ -3,7 +3,7 @@ const axios = require('axios')
 
 const getCharacterById = async (id) => {
     // return data.find(char => char.id == id)
-    let res = await axios(`https://rickandmortyapi.com/api/cer/${id}`)
+    let res = await axios(`https://rickandmortyapi.com/api/character/${id}`)
     console.log(res.status)
 
     let char = {
