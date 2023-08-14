@@ -1,15 +1,15 @@
-const db = require('../utils/favs')
+let db = require('../utils/favs')
 
 const save = (newFav) => {
     db.push(newFav)
 
-    return db
+    return db // [] => [{}, {}]
 }
 
 const deleteById = (id) => {
-    db = db.filter(char => char.id !== id)
+    db = db.filter(char => char.id !== Number(id))
 
-    return db
+    return db // [{}, {}] => [{}] => []
 }
 
 module.exports = { save, deleteById }
