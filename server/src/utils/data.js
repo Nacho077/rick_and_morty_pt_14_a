@@ -5,7 +5,7 @@ module.exports = [
       status: 'Alive',
       species: 'Human',
       gender: 'Male',
-      origin: {
+      origin: { // 'Earth (C-137)'
          name: 'Earth (C-137)',
          url: 'https://rickandmortyapi.com/api/location/1',
       },
