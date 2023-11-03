@@ -22,14 +22,23 @@ function App() {
    let location = useLocation()
    let navigate = useNavigate()
 
-   const handleLogin = (userData) => {
-      const miEmail = "hola@gmail.com"
-      const miPass = "Hola123"
-
-      if(userData.email == miEmail && userData.password == miPass) {
-         setLogin(true)
+   const handleLogin = async (userData) => {
+      try {
+         const response = await axios.get(`http://localhost:3001/rickandmorty/login?email=${userData.email}&password=${userData.password}`)
+         setLogin(response.data.access)
+         
          navigate("/home")
+      } catch(e) {
+         alert(e)
       }
+      
+      // const miEmail = "hola@gmail.com"
+      // const miPass = "Hola123"
+
+      // if(userData.email == miEmail && userData.password == miPass) {
+      //    setLogin(true)
+      //    navigate("/home")
+      // }
    }
 
    const logOut = () => {

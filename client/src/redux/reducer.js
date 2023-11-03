@@ -14,7 +14,7 @@ const reducer = (state = initialState, {type, payload}) => {
                 allCharacters: payload
             }
 
-        case REMOVE_FAV: // No anda
+        case REMOVE_FAV:
             return {
                 ...state,
                 allCharacters: payload,

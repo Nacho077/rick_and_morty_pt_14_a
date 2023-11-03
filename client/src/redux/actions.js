@@ -28,7 +28,7 @@ export const removeFav = (id) => {
             });
         });
     };
- };
+};
 
 export const filter = gender => {
     return {
